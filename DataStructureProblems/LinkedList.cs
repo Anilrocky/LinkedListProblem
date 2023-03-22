@@ -104,7 +104,7 @@ namespace DataStructureProblems
             }
             NewNode.next = null;
         }
-        public void SearchElement(int value)
+        public int SearchElement(int value)
         {
             Node node = this.head;
             int count = 0;
@@ -117,7 +117,7 @@ namespace DataStructureProblems
                 node = node.next;
                 count++;
             }
-            //return count;
-        }       
+            return count;
+        }
     }
 }
