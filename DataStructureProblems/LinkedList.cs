@@ -55,5 +55,29 @@ namespace DataStructureProblems
                 temp = temp.next;
             }
         }
+        public void InsertAtParticularPosition(int position,int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newestNode;
+            }
+            if (position  == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+        }
     }
 }
