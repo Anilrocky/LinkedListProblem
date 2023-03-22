@@ -27,5 +27,33 @@ namespace DataStructureProblems
             }
             Console.WriteLine("{0} is inserted to Linked list",node.data);
         }
+        public void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = newNode;
+                head.next = temp;
+            }
+        }
+        public void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked list is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.Write(temp.data+" ");
+                temp = temp.next;
+            }
+        }
     }
 }
