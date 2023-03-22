@@ -113,6 +113,7 @@ namespace DataStructureProblems
                 if (node.data == value)
                 {
                     Console.WriteLine(count);
+                    return count;
                 }
                 node = node.next;
                 count++;
@@ -142,6 +143,23 @@ namespace DataStructureProblems
             }
             Node next = temp.next.next;
             temp.next = next;
+            Size();
+        }
+        public void Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked list is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("Length of Linked list is: " + count);
         }
     }
 }
