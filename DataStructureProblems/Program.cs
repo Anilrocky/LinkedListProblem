@@ -9,7 +9,8 @@ namespace DataStructureProblems
             LinkedList list = new LinkedList();
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Add elements to Linked list \n2.Add in Reverse order \n3.Display elements \n4.Insert element at particular position \n5.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Add elements to Linked list \n2.Add in Reverse order \n3.Display elements \n4.Insert element at particular position"+
+                    "\n5.Delete first element \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -32,6 +33,9 @@ namespace DataStructureProblems
                         list.InsertAtParticularPosition(1, 30);
                         break;
                     case 5:
+                        list.DeleteFirstElement();
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
