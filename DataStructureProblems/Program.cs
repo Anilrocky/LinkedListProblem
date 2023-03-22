@@ -9,7 +9,7 @@ namespace DataStructureProblems
             LinkedList list = new LinkedList();
             while (flag)
             {
-                Console.WriteLine("Choose option to perform \n1.Create Linked list \n2.Exit");
+                Console.WriteLine("Choose option to perform \n1.Add elements to Linked list \n2.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
