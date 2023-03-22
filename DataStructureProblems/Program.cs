@@ -10,7 +10,7 @@ namespace DataStructureProblems
             while (flag)
             {
                 Console.WriteLine("\nChoose option to perform \n1.Add elements to Linked list \n2.Add in Reverse order \n3.Display elements \n4.Insert element at particular position"+
-                    "\n5.Delete first element \n6.Delete last element \n7.Exit");
+                    "\n5.Delete first element \n6.Delete last element \n7.Search element \n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -39,6 +39,9 @@ namespace DataStructureProblems
                         list.DeleteLastElement();
                         break;
                     case 7:
+                        list.SearchElement(30);
+                        break;                 
+                    case 8:
                         flag = false;
                         break;
                 }
